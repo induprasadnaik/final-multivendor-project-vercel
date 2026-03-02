@@ -39,7 +39,7 @@ function AdminSidebar({ collapsed, mobileOpen, setMobileOpen }) {
 
     await api.post("/users/logout");
     setUser(null);
-    navigate("/admin/authadmin");
+    navigate("login/admin");
   }
 
 useEffect(() => {

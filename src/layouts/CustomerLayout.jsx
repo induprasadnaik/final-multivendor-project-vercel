@@ -33,7 +33,7 @@ useEffect(() => {
     // Ctrl + A opens Admin Login
     if (e.ctrlKey && e.key.toLowerCase() === "a") {
       e.preventDefault(); // prevents browser "select all"
-      navigate("/admin/authadmin");
+      navigate("login/admin");
     }
   };
 

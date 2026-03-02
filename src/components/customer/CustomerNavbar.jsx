@@ -81,7 +81,8 @@ function CustomerNavbar() {
             <Link to ="/" className="hover:text-(--bright-teal) cursor-pointer">Home </Link>
             <Link to ="/customer/contactus" className="hover:text-(--bright-teal) cursor-pointer">Contact Us </Link>
            <Link to ="/customer/aboutus"  className="hover:text-(--bright-teal) cursor-pointer">About Us</Link>
-
+{ user && (
+<>
            <Link to ="/customer/product/cart" ><button className="relative hover:text-(--bright-teal)">
               <ShoppingCartIcon className="w-7 h-7" />
               <span className="absolute -top-2 -right-2 bg-(--mid-teal) text-(--light-bg) text-xs px-1.5 py-0.5 rounded-full font-bold">
@@ -89,10 +90,20 @@ function CustomerNavbar() {
               </span>
             </button>
 </Link>
-            <button onClick={() => setProfileOpen(true)} className="hover:text-(--bright-teal)">
-              <UserCircleIcon className="w-7 h-7" />
-            </button>
-          </div>
+</>
+  )}
+            { user ? (
+                <button onClick={() => setProfileOpen(true)} className="hover:text-(--bright-teal)">
+                  <UserCircleIcon className="w-7 h-7" />
+                </button>
+              ) : (
+                <button onClick={() => navigate('/login')} className="hover:text-(--bright-teal)">
+                    <UserCircleIcon className="w-7 h-7" />
+                </button>
+              )
+}
+
+            </div>
         </div>
 
         {/* mobie view searchvar */}
@@ -140,6 +151,7 @@ function CustomerNavbar() {
 </Link>
 
 
+
         <Link to="/customer/product/orders" className="flex flex-col items-center text-(--dark-teal) hover:text-(--bright-teal)">
           <ClipboardDocumentListIcon className="w-6 h-6" />
           <span className="text-xs">Orders</span>
@@ -171,7 +183,12 @@ function CustomerNavbar() {
              <Link to ="/customer/contactus" className="hover:text-(--bright-teal) cursor-pointer">Contact Us</Link>
            <Link to ="/customer/aboutus" className="hover:text-(--bright-teal) cursor-pointer">About Us</Link>
 
+             { user ?  (
               <button onClick={handlelogout} className="text-red-500">Logout</button>
+             ) : (
+              <button onClick={() => navigate('/login')} className="text-red-500">Login</button>
+             )
+            }
             </nav>
           </div>
         </>

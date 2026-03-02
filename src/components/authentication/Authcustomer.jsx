@@ -278,7 +278,7 @@ function Authcustomer() {
               </button>
             </div>
             <div className="grid grid-cols-1 justify-items-center gap-2 mt-4">
-              <Link to="vendor/authvendor">
+              <Link to="vendor/">
                 <button className="text-sm text-emerald-700 cursor-pointer">
                   Want to sell products? Become a Vendor{" "}
                 </button>

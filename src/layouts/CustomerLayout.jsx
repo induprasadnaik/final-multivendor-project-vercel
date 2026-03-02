@@ -54,6 +54,7 @@ useEffect(() => {
     };
   }, [user]);
   return (
+    <>
     <div className="flex w-full min-h-screen bg-(--primary) text-(--text) overflow-hidden">
 
 
@@ -69,6 +70,59 @@ useEffect(() => {
         </main>
       </div>
     </div>
+    <footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+
+      <div>
+        <h2 class="text-4xl font-bold text-white mb-4">Naik's Shop</h2>
+
+      </div>
+
+
+
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">Home</a></li>
+          <li><a href="#" class="hover:text-white transition">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition">Services</a></li>
+          <li><a href="#" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Support</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">FAQs</a></li>
+          <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+        </ul>
+      </div>
+
+      <div>
+
+        <p class="text-sm leading-relaxed">
+          We provide high-quality products tailored to your needs. Discover the world with confidence.
+        </p>
+      </div>
+
+
+    </div>
+
+
+    <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+      © 2026 Naik's Shop. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+</>
   );
 }
 

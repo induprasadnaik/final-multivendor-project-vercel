@@ -36,7 +36,7 @@ function VendorSidebar({ collapsed, mobileOpen, setMobileOpen }) {
 
     await api.post("/users/logout");
     setUser(null);
-    navigate("/vendor/authvendor");
+    navigate("/login/vendor");
   }
   const [productOpen, setProductOpen] = useState(false);
   return (

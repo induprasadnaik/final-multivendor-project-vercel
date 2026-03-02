@@ -10,7 +10,7 @@ import {
   ChevronDownIcon,
   ViewColumnsIcon,
   ChevronLeftIcon,
-  RectangleGroupIcon 
+  RectangleGroupIcon
 } from "@heroicons/react/24/outline";
 
 function VendorNavbar({ collapsed, setCollapsed, setMobileOpen }) {
@@ -20,10 +20,10 @@ function VendorNavbar({ collapsed, setCollapsed, setMobileOpen }) {
   const navigate = useNavigate();
 if (loading) return null;
   const handlelogout =async()=>{
-   
+
     await api.post("/users/logout");
     setUser(null);
-    navigate("/vendor/authvendor");
+    navigate("/login/vendor");
   }
 
   return (

@@ -116,6 +116,7 @@ const decreaseQty = (e) => {
           alt={product.name}
           className="h-45 w-full object-cover group-hover:scale-110 transition "
         />
+        { user ? (
         <button onClick={() => wishlist(product._id)} className="cursor-pointer text-2xl z-99999 absolute right-2 top-2 bg-white rounded-full px-1 py-1">
           {wishlisted ? (
             <HeartSolid className="w-7 h-7 text-red-500" />
@@ -123,6 +124,7 @@ const decreaseQty = (e) => {
             <HeartOutline className="w-7 h-7 text-gray-600" />
           )}
         </button>
+        ) : ( '' ) }
       </div>
 
       <h3 className="mt-3 font-semibold text-(--dark-teal) line-clamp-2 min-h-12"  onClick={()=>navigate(`/customer/product/${product._id}`)}>

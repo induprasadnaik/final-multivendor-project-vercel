@@ -8,8 +8,8 @@ function Rolebasednavbar(props) {
      const { user, loading } = useAuth();
       if (loading) return null;
   if (!user) {
-      //return <CustomerNavbar {...props} />;
-      return null;
+      return <CustomerNavbar {...props} />;
+      // return null;
   };
 
   if (user.role === "admin" ) {
